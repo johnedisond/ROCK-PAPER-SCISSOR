@@ -1,0 +1,64 @@
+:root {
+    --dark-color: #212121;
+    --light-color: #fffeff;
+    --accent-color: #4b4bf7;
+}
+
+body {  
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+.container h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.theGame {
+    color: var(--dark-color);
+    border: 1px solid var(--dark-color);
+    border-radius: 10px;
+    background-color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playerSelect, .computerSelect {
+    margin: 0 20px;
+}
+
+.displayPlayerScore, .displayComputerScore {
+    margin-left: 20px;
+    color: rgba(33, 33, 33, 0.5);
+}
+
+.playerSelect button, .computerSelect button {
+    font-size: 2rem;
+    border: none;
+    background: none;
+    outline: none;
+    margin: 20px;
+}
+
+.displayChoices {
+    margin-top: 40px;
+}
+
+.displayGameResult {
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--accent-color);
+    color: var(--light-color);
+}
