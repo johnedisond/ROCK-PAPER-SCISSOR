@@ -51,12 +51,28 @@ body {
     margin: 20px;
 }
 
+.selection {
+    transition:  500ms ease-out;
+}
+
+.selection:hover {
+    cursor: pointer;
+    transform: scale(1.8);
+}
+
 .displayChoices {
-    margin-top: 40px;
+    margin: 40px 0 20px 0;
+}
+
+.displayChoices p {
+    margin: 10px 0;
+    padding: 10px 0;
+    font-weight: 700;
+    color: var(--dark-color);
 }
 
 .displayGameResult {
-    padding: 16px;
+    padding: 20px 40px;
     border: none;
     border-radius: 10px;
     background-color: var(--accent-color);
