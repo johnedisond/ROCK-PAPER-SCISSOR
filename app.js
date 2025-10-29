@@ -4,9 +4,15 @@ const displayComputerScore = document.querySelector(".displayComputerScore");
 const displayPlayerChoice = document.querySelector(".displayPlayerChoice");
 const displayComputerChoice = document.querySelector(".displayComputerChoice");
 const displayGameResult = document.querySelector(".displayGameResult");
+const displayWinnerResult = document.querySelector(".displayWinnerResult");
 
 
 const choices = ["rock", "paper", "scissor"];
+
+let playerScore = 0;
+let computerScore = 0;
+let winningScore = 3;
+let isGameOver = false;
 
 for (let playerClicked of playerSelect) {
     playerClicked.addEventListener("click", () => {
@@ -45,5 +51,30 @@ function playRound(playerChoice) {
     displayPlayerChoice.textContent = `YOU: ${playerChoice.toUpperCase()}`;
     displayComputerChoice.textContent = `COMPUTER: ${computerChoice.toUpperCase()}`;
     displayGameResult.textContent = result;
+
+
+    // -display Score-
+    if (!isGameOver && result === "YOU WIN!") {
+        playerScore += 1;
+        if (playerScore === winningScore) {
+            isGameOver = true;
+        }
+        displayPlayerScore.textContent = playerScore;
+    }
+
+    if (!isGameOver && result === "YOU LOSE!") {
+        computerScore += 1;
+        if (computerScore === winningScore) {
+            isGameOver = true;
+        }
+        displayComputerScore.textContent = computerScore;
+    }
+
+    if (playerScore === winningScore){
+        displayWinnerResult.textContent = "GAME OVER! YOU WIN THIS ROUND!";
+
+    }else if (computerScore === winningScore) {
+        displayWinnerResult.textContent = "GAME OVER! COMPUTER WINS THIS ROUND!";
+    }
 }
 
