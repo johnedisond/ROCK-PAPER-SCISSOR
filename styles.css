@@ -3,6 +3,8 @@
     --light-color: #fffeff;
     --accent-color: #4b4bf7;
     --hover-color: #5656e1;
+    --win-color: #32CD32;
+    --lose-color: #FF0609;
 }
 
 body {  
@@ -100,4 +102,20 @@ body {
     border-radius: 10px;
     background-color: var(--accent-color);
     color: var(--light-color);
+}
+
+.winBgColor {
+    background-color: var(--win-color);
+}
+
+.loseBgColor {
+    background-color: var(--lose-color);
+}
+
+.winTextColor {
+    color: var(--win-color);
+}
+
+.loseTextColor {
+    color: var(--lose-color);
 }
