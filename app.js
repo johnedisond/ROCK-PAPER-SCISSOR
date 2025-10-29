@@ -19,4 +19,10 @@ for (let playerClicked of playerSelect) {
 function playRound(playerChoice) {
     const computerChoice = choices[Math.floor(Math.random() * 3)];
     console.log(computerChoice);
+
+    document.querySelector(`.${computerChoice}`).classList.add("active");
+    setTimeout(() => {
+        document.querySelector(`.${computerChoice}`).classList.remove("active");
+    }, 1500);
 }
+

@@ -77,6 +77,10 @@ body {
     transform: scale(1.8);
 }
 
+.active {
+    transform: scale(1.8);
+}
+
 .displayChoices {
     margin: 40px 0 20px 0;
 }
