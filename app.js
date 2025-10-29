@@ -20,9 +20,30 @@ function playRound(playerChoice) {
     const computerChoice = choices[Math.floor(Math.random() * 3)];
     console.log(computerChoice);
 
+    // -animate computerChoice-
     document.querySelector(`.${computerChoice}`).classList.add("active");
     setTimeout(() => {
         document.querySelector(`.${computerChoice}`).classList.remove("active");
     }, 1500);
+
+
+    let result = "";
+
+    if (playerChoice === computerChoice) {
+        result = "It's a TIE!";
+
+    }else if ((playerChoice === "rock" && computerChoice === "scissor") ||
+              (playerChoice === "paper" && computerChoice === "rock") ||
+              (playerChoice === "scissor" && computerChoice === "paper")) {
+        result = "YOU WIN!";
+    
+    }else {
+        result = "YOU LOSE!";
+    }
+    console.log(result);
+
+    displayPlayerChoice.textContent = `YOU: ${playerChoice.toUpperCase()}`;
+    displayComputerChoice.textContent = `COMPUTER: ${computerChoice.toUpperCase()}`;
+    displayGameResult.textContent = result;
 }
 

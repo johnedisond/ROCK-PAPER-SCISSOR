@@ -83,17 +83,19 @@ body {
 
 .displayChoices {
     margin: 40px 0 20px 0;
+    width: 200px;
 }
 
 .displayChoices p {
     margin: 10px 0;
-    padding: 10px 0;
+    padding: 10px;
     font-weight: 700;
     color: var(--dark-color);
 }
 
 .displayGameResult {
-    padding: 20px 40px;
+    text-align: center;
+    padding: 20px;
     border: none;
     border-radius: 10px;
     background-color: var(--accent-color);
