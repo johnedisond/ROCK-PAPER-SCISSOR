@@ -16,6 +16,17 @@ body {
     align-items: center;
 }
 
+body p {
+    margin-bottom: 40px;
+}
+
+select {
+    border: 1px solid var(--dark-color);
+    border-radius: 10px;
+    padding: 2px 4px;
+    outline: none;
+}
+
 #newGame {
     background-color: var(--accent-color);
     color: var(--light-color);

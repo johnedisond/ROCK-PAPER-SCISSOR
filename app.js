@@ -6,6 +6,7 @@ const displayComputerChoice = document.querySelector(".displayComputerChoice");
 const displayGameResult = document.querySelector(".displayGameResult");
 const displayWinnerResult = document.querySelector(".displayWinnerResult");
 const resetGame = document.querySelector(".resetGame");
+const winnerScore = document.querySelector("#winnerScore");
 
 
 const choices = ["rock", "paper", "scissor"];
@@ -29,14 +30,12 @@ const disableChoices = () => {
 for (let playerClicked of playerSelect) {
     playerClicked.addEventListener("click", () => {
         const playerChoice = playerClicked.id;
-        console.log(playerChoice);
         playRound(playerChoice);
     })
 }
 
 function playRound(playerChoice) {
     const computerChoice = choices[Math.floor(Math.random() * 3)];
-    console.log(computerChoice);
 
     // -animate computerChoice-
     document.querySelector(`.${computerChoice}`).classList.add("active");
@@ -58,7 +57,6 @@ function playRound(playerChoice) {
     }else {
         result = "YOU LOSE!";
     }
-    console.log(result);
 
     displayGameResult.classList.remove("winBgColor", "loseBgColor");
     displayGameResult.classList.remove("winTextColor", "loseTextColor");
@@ -132,3 +130,7 @@ function reset() {
 
 resetGame.addEventListener("click", reset);
 
+winnerScore.addEventListener("change", function() {
+    winningScore =parseInt(this.value);
+    reset();
+})
