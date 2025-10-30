@@ -5,6 +5,7 @@ const displayPlayerChoice = document.querySelector(".displayPlayerChoice");
 const displayComputerChoice = document.querySelector(".displayComputerChoice");
 const displayGameResult = document.querySelector(".displayGameResult");
 const displayWinnerResult = document.querySelector(".displayWinnerResult");
+const resetGame = document.querySelector(".resetGame");
 
 
 const choices = ["rock", "paper", "scissor"];
@@ -106,4 +107,28 @@ function playRound(playerChoice) {
         disableChoices();
     }
 }
+
+function reset() {
+    isGameOver = false;
+    playerScore = 0;
+    computerScore = 0;
+    displayPlayerScore.textContent = 0;
+    displayComputerScore.textContent = 0;
+    displayPlayerChoice.textContent = "YOU:";
+    displayComputerChoice.textContent = "COMPUTER:";
+    displayGameResult.textContent = "RESULT";
+    displayWinnerResult.textContent = "";
+    displayPlayerScore.classList.remove("winTextColor", "loseTextColor");
+    displayComputerScore.classList.remove("winTextColor", "loseTextColor");
+    displayGameResult.classList.remove("winBgColor", "loseBgColor");
+    displayWinnerResult.classList.remove("winTextColor", "loseTextColor");
+    rock.disabled = false;
+    paper.disabled = false;
+    scissor.disabled = false;
+    rock.classList.add("selection");
+    paper.classList.add("selection");
+    scissor.classList.add("selection");
+}
+
+resetGame.addEventListener("click", reset);
 
