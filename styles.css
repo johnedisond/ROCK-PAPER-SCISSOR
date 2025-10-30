@@ -16,8 +16,13 @@ body {
     align-items: center;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 body p {
     margin-bottom: 40px;
+    font-size: 1rem;
 }
 
 select {
@@ -52,6 +57,7 @@ select {
 .container h2 {
     display: flex;
     justify-content: center;
+    font-size: 1.5rem;
 }
 
 .theGame {
@@ -103,11 +109,13 @@ select {
     margin: 10px 0;
     padding: 10px;
     font-weight: 700;
+    font-size: 1rem;
     color: var(--dark-color);
 }
 
 .displayGameResult {
     text-align: center;
+    font-size: 1.5rem;
     padding: 20px;
     border: none;
     border-radius: 10px;
@@ -129,4 +137,56 @@ select {
 
 .loseTextColor {
     color: var(--lose-color);
+}
+
+@media (max-width: 692px) {
+    .container h2 {
+        margin: 20px 40px;
+    }
+
+    .playerSelect, .computerSelect {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 419px) {
+    .container h2 {
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-top: 10px;
+    }
+
+    body p {
+        margin-bottom: 20px;
+        font-size: 0.85rem;
+    }
+
+    #newGame {
+        font-size: 0.85rem;
+    }
+
+    .selection:hover {
+        transform: scale(1.6);
+    }
+
+    .active {
+        transform: scale(1.6);
+    }
+
+    .displayChoices {
+        font-size: 0.85rem;
+    }
+
+    .displayGameResult {
+        font-size: 1.3rem;
+    }
+
+    .winnerResult {
+        font-size: 0.85rem;
+    }
 }

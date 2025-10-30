@@ -7,6 +7,7 @@ const displayGameResult = document.querySelector(".displayGameResult");
 const displayWinnerResult = document.querySelector(".displayWinnerResult");
 const resetGame = document.querySelector(".resetGame");
 const winnerScore = document.querySelector("#winnerScore");
+const shortText = document.querySelector("#short-text");
 
 
 const choices = ["rock", "paper", "scissor"];
@@ -134,3 +135,15 @@ winnerScore.addEventListener("change", function() {
     winningScore =parseInt(this.value);
     reset();
 })
+
+function updateTextContent() {
+    if (window.matchMedia("(max-width: 692px)").matches) {
+        shortText.textContent = "COMP:";
+
+    }else {
+        shortText.textContent = "COMPUTER:";
+    }
+}
+
+updateTextContent();
+window.addEventListener("resize", updateTextContent);
