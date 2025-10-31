@@ -63,7 +63,7 @@ function playRound(playerChoice) {
     displayGameResult.classList.remove("winTextColor", "loseTextColor");
 
     displayPlayerChoice.textContent = `YOU: ${playerChoice.toUpperCase()}`;
-    displayComputerChoice.textContent = `COMPUTER: ${computerChoice.toUpperCase()}`;
+    displayComputerChoice.textContent = `CPU: ${computerChoice.toUpperCase()}`;
     displayGameResult.textContent = result;
 
     if (result === "YOU WIN!") {
@@ -114,7 +114,7 @@ function reset() {
     displayPlayerScore.textContent = 0;
     displayComputerScore.textContent = 0;
     displayPlayerChoice.textContent = "YOU:";
-    displayComputerChoice.textContent = "COMPUTER:";
+    displayComputerChoice.textContent = "CPU:";
     displayGameResult.textContent = "RESULT";
     displayWinnerResult.textContent = "";
     displayPlayerScore.classList.remove("winTextColor", "loseTextColor");
@@ -138,7 +138,7 @@ winnerScore.addEventListener("change", function() {
 
 function updateTextContent() {
     if (window.matchMedia("(max-width: 692px)").matches) {
-        shortText.textContent = "COMP:";
+        shortText.textContent = "CPU:";
 
     }else {
         shortText.textContent = "COMPUTER:";
