@@ -7,7 +7,7 @@ View the live preview <a href="https://johnedisond.github.io/ROCK-PAPER-SCISSOR/
 ### Screenshot
 
 ![rpswide](<RPS imgs/RPS wide.png>) <br/>
-![rpsnarrow](<RPS Imgs/RPS narrow.png>) <br/>
+![rpsnarrow](<RPS imgs/RPS narrow.png>) <br/>
 
 ### Instructions
 
@@ -21,7 +21,7 @@ View the live preview <a href="https://johnedisond.github.io/ROCK-PAPER-SCISSOR/
 
 ### Built with
 
--Semantic HTML5 markup
--vanillas CSS
--Flexbox and CSS Grid
--vanilla JS
+-Semantic HTML5 markup <br/>
+-vanillas CSS <br/>
+-Flexbox and CSS Grid <br/>
+-vanilla JS <br/>
